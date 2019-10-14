@@ -3,7 +3,7 @@
 # Diamonds Kaggle Competition
 Ironhack Madrid Data Bootcamp
 
-<img style="float: left;" src="images/diamond.jpg" width="600">
+<img style="float: left;" src="images/diamond.jpg" width="250">
 
 ## Overview
 
