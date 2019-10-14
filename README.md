@@ -1,8 +1,7 @@
 ![IronHack Logo](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_d5c5793015fec3be28a63c4fa3dd4d55.png)
 
 # Diamonds Kaggle Competition
-Ironhack Madrid Data Bootcamp
-Predicting diamonds prices - [link](https://www.kaggle.com/c/diamonds0819/)
+Predicting diamonds prices - [link to competition](https://www.kaggle.com/c/diamonds0819/)
 
 
 <img style="float: left;" src="images/diamond.jpg" width="250">
