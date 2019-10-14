@@ -2,7 +2,7 @@
 
 # Diamonds Kaggle Competition
 Ironhack Madrid Data Bootcamp
-Predicting diamonds prices - [link]](https://www.kaggle.com/c/diamonds0819/)
+Predicting diamonds prices - [link](https://www.kaggle.com/c/diamonds0819/)
 
 
 <img style="float: left;" src="images/diamond.jpg" width="250">
