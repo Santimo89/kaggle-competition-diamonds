@@ -1,0 +1,20 @@
+Performance metrics Linear_Regression:
+- r2 score: 0.9059799113396662
+- MSE: 1533918.9461972076
+
+Performance metrics Random_Forest:
+- r2 score: 0.9824042744155354
+- MSE: 287070.74446191406
+
+Performance metrics Decision_Tree:
+- r2 score: 0.9650696480150259
+- MSE: 569881.7079471017
+
+Performance metrics SVR:
+- r2 score: 0.7316284797526149
+- MSE: 4378427.689154978
+
+Performance metrics KNeighbors:
+- r2 score: 0.9733551042144842
+- MSE: 434706.1468162156
+
