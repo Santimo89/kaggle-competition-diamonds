@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics import r2_score
 from sklearn.metrics import mean_squared_error
+from sklearn.preprocessing import StandardScaler
 
 
 def xy(df):
@@ -13,24 +14,16 @@ def xy(df):
 
 def clean(df):
     # transform columns
-    cut = {'Fair': 1, 'Good': 2, 'Ideal': 3, 'Premium': 4, 'Very Good': 5}
-    for k, v in cut.items():
-        df['cut'] = df['cut'].apply(lambda x: v if x == k else x)
-
-    color = {'D': 1, 'E': 2, 'F': 3, 'G': 4, 'H': 5, 'I': 6, 'J': 7}
-    for k, v in color.items():
-        df['color'] = df['color'].apply(lambda x: v if x == k else x)
-
-    clarity = {'I1': 1, 'SI2': 2, 'SI1': 3, 'VS2': 4,
-               'VS1': 5, 'VVS2': 6, 'VVS1': 7, 'IF': 8}
-    for k, v in clarity.items():
-        df['clarity'] = df['clarity'].apply(lambda x: v if x == k else x)
+    columns = {'cut': {'Fair': 1, 'Good': 2, 'Ideal': 3, 'Premium': 4, 'Very Good': 5}, 'color': {'D': 1, 'E': 2, 'F': 3, 'G': 4, 'H': 5, 'I': 6, 'J': 7}, 'clarity': {'I1': 1, 'SI2': 2, 'SI1': 3, 'VS2': 4,
+                                                                                                                                                                       'VS1': 5, 'VVS2': 6, 'VVS1': 7, 'IF': 8}}
+    for col, eq in columns.items():
+        for cat, val in eq.items():
+            df[col] = df[col].apply(lambda x: val if x == cat else x)
 
     # drop columns
     df.drop('depth', axis=1, inplace=True)
 
     # standardize
-    from sklearn.preprocessing import StandardScaler
     scaler = StandardScaler()
     scaler.fit(df)
     df = pd.DataFrame(scaler.transform(df), columns=df.columns)
